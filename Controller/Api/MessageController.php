@@ -64,7 +64,7 @@ class MessageController
      *
      * @QueryParam(name="page", requirements="\d+", default="1", description="Page for message list pagination")
      * @QueryParam(name="count", requirements="\d+", default="10", description="Number of messages by page")
-     * @QueryParam(name="orderBy", array=true, requirements="ASC|DESC", nullable=true, strict=true, description="Order by array (key is field, value is direction)")
+     * @QueryParam(name="orderBy", map=true, requirements="ASC|DESC", nullable=true, strict=true, description="Order by array (key is field, value is direction)")
      * @QueryParam(name="type", nullable=true, description="Message type filter")
      * @QueryParam(name="state", requirements="\d+", strict=true, nullable=true, description="Message status filter")
      *
