@@ -26,8 +26,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('sonata_notification')->children();
+        $treeBuilder = new TreeBuilder('sonata_notification');
+        $rootNode = $treeBuilder->getRootNode()->children();
 
         $backendInfo = <<<'EOF'
 Other backends you can use:
@@ -184,8 +184,8 @@ EOF;
      */
     protected function getQueueNode()
     {
-        $treeBuilder = new TreeBuilder();
-        $node = $treeBuilder->root('queues');
+        $treeBuilder = new TreeBuilder('queues');
+        $node = $treeBuilder->getRootNode();
 
         $queuesInfo = <<<'EOF'
 Example for using RabbitMQ
